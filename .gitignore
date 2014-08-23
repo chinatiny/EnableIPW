@@ -1,0 +1,13 @@
+*.user
+*.suo
+*.sdf
+*.opensdf
+*.aps
+/LollyCSOld/
+/simplewifi/
+
+Debug
+Release
+x64
+packages
+ipch
