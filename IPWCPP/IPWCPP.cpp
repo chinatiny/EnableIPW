@@ -65,6 +65,20 @@ bool EnableInternet(LPCWSTR wszName, bool bEnable)
 	return result;
 }
 
+BOOL EnableProxy(bool bEnable)
+{
+    LONG status;
+	DWORD dwData = bEnable ? 1 : 0;
+
+	status = RegSetKeyValue( HKEY_CURRENT_USER,
+                             L"Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings",
+                             L"ProxyEnable",
+							 REG_DWORD,
+							 &dwData,
+							 sizeof(DWORD));
+	return status == ERROR_SUCCESS;
+}
+
 // http://kent-7.blogspot.jp/2009/10/native-wifi-api-wlanapi.html
 //-------------------------------------------------------------------------
 //  ワイヤレスネットワークに接続する
@@ -134,9 +148,13 @@ BOOL EnableWifi(LPCWSTR wszName, LPCWSTR wszPassword, bool bEnable)
 // Note: Run as Administrator 
 int _tmain(int argc, _TCHAR* argv[])
 {
+	if(argc < 2) return 0;
+
+	bool bEnable = wcscmp(argv[1], L"/e") == 0;
 	CoInitialize(0);
-	EnableInternet(L"以太网", false);
-	EnableWifi(L"", L"", false);
+	EnableInternet(L"ローカル エリア接続", bEnable);
+	EnableProxy(bEnable);
+	//EnableWifi(L"", L"", bEnable);
 	CoUninitialize();
 }
 
