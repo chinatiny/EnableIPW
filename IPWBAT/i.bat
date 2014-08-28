@@ -1,4 +1,4 @@
-netsh wlan disconnect interface="ƒƒCƒ„ƒŒƒX ƒlƒbƒgƒ[ƒNÚ‘±" 
-netsh wlan delete profile name="NzXj AIBPXFJ" interface="ƒƒCƒ„ƒŒƒX ƒlƒbƒgƒ[ƒNÚ‘±"
-netsh interface set interface "ƒ[ƒJƒ‹ ƒGƒŠƒAÚ‘±" ENABLED
-netsh winhttp set proxy gw3:80
+netsh wlan disconnect interface="ãƒ¯ã‚¤ãƒ¤ãƒ¬ã‚¹ ãƒãƒƒãƒˆãƒ¯ãƒ¼ã‚¯æ¥ç¶š" 
+netsh wlan delete profile name="NzXj AIBPXFJ" interface="ãƒ¯ã‚¤ãƒ¤ãƒ¬ã‚¹ ãƒãƒƒãƒˆãƒ¯ãƒ¼ã‚¯æ¥ç¶š"
+netsh interface set interface "ãƒ­ãƒ¼ã‚«ãƒ« ã‚¨ãƒªã‚¢æ¥ç¶š" ENABLED
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /f /v "ProxyEnable" /t REG_DWORD /d "1"
