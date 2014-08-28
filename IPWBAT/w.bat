@@ -1,4 +1,4 @@
-netsh interface set interface "ƒ[ƒJƒ‹ ƒGƒŠƒAÚ‘±" DISABLED
-netsh winhttp reset proxy
-netsh wlan add profile filename="C:\zw\Programs\abc\NzXj AIBPXFJ.xml" interface="ƒƒCƒ„ƒŒƒX ƒlƒbƒgƒ[ƒNÚ‘±"
-netsh wlan connect ssid="NzXj AIBPXFJ.xml" name="NzXj AIBPXFJ" interface="ƒƒCƒ„ƒŒƒX ƒlƒbƒgƒ[ƒNÚ‘±"
+netsh interface set interface "ãƒ­ãƒ¼ã‚«ãƒ« ã‚¨ãƒªã‚¢æ¥ç¶š" DISABLED
+reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /f /v "ProxyEnable" /t REG_DWORD /d "0"
+netsh wlan add profile filename="C:\zw\Programs\abc\NzXj AIBPXFJ.xml" interface="ãƒ¯ã‚¤ãƒ¤ãƒ¬ã‚¹ ãƒãƒƒãƒˆãƒ¯ãƒ¼ã‚¯æ¥ç¶š"
+netsh wlan connect ssid="NzXj AIBPXFJ.xml" name="NzXj AIBPXFJ" interface="ãƒ¯ã‚¤ãƒ¤ãƒ¬ã‚¹ ãƒãƒƒãƒˆãƒ¯ãƒ¼ã‚¯æ¥ç¶š"
